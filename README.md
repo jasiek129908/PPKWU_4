@@ -52,6 +52,7 @@ whiteSpaceCounter: 1
 specialCharacterCounter: 4
 ```
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Second API
 API used to convert archival data to specific. It takes two parameters entry format and return format as input. Available options for them: json, xml, csv and txt.
 To use API, u need to sent GET method and pass request body as text. Request body needs to be in specific format that we pass within from parameter.
 ## Syntax
