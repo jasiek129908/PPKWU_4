@@ -9,13 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class ControllerConverter {
 
     @GetMapping("/api/{from}/{to}")
-    public void convertString(@PathVariable("from") String fromFormat, @PathVariable("to") String targetFormat
+    public String convertString(@PathVariable("from") String fromFormat, @PathVariable("to") String targetFormat
                                 , @RequestBody String body)
     {
-//        System.out.println(fromFormat);
-//        System.out.println(targetFormat);
-//        System.out.println(body);
-        StringFormatUtil.formatString(fromFormat,targetFormat,body);
+        return StringFormatUtil.formatString(fromFormat,targetFormat,body);
     }
 
 

@@ -12,7 +12,7 @@ public class StringFormatUtil {
             return text;
         }
         String jsonText = covertStringToJsonFormat(from, text);
-        String response = null;
+        String response = jsonText;
         switch (to) {
             case "xml":
                 JSONObject jsonObject = new JSONObject(jsonText);
@@ -58,7 +58,7 @@ public class StringFormatUtil {
                 for (String line : textToParse) {
                     String key = line.substring(0, line.indexOf(":"));
                     String valueLine = line.substring(line.indexOf(":") + SPACE_SIZE);
-                    String value = valueLine.substring(0, valueLine.length() - 1);
+                    String value=valueLine.trim();
 
                     jsonObject.put(key, value);
                 }
