@@ -44,6 +44,7 @@ public class StringFormatUtil {
         String jsonString = text;
         switch (from) {
             case "csv":
+                text= text.replaceAll("\\r", "");
                 JSONArray jsonArray = CDL.toJSONArray(text);
                 jsonString = jsonArray.get(0).toString();
                 break;
