@@ -16,7 +16,6 @@ public class StringFormatUtil {
         return "";
     }
 
-    //chcemy zkonwertowac z csv lub xml lub txt na jsona
     private static String covertStringToJsonFormat(String from, String text) {
         String jsonString = null;
         switch (from) {
@@ -29,13 +28,17 @@ public class StringFormatUtil {
                 jsonString = json.toString();
                 break;
             case "txt":
+                final int SPACE_SIZE = 2;
                 String[] textToParse = text.split("\n");
                 JSONObject jsonObject = new JSONObject();
                 for (String line : textToParse) {
-                    String key = line.substring(0,line.indexOf(":"));
-                    
-                }
+                    String key = line.substring(0, line.indexOf(":"));
+                    String valueLine = line.substring(line.indexOf(":") + SPACE_SIZE);
+                    String value = valueLine.substring(0, valueLine.length() - 1);
 
+                    jsonObject.put(key, value);
+                }
+                System.out.println(jsonObject);
                 break;
             default:
                 break;
