@@ -12,9 +12,10 @@ public class ControllerConverter {
     public void convertString(@PathVariable("from") String fromFormat, @PathVariable("to") String targetFormat
                                 , @RequestBody String body)
     {
-        System.out.println(fromFormat);
-        System.out.println(targetFormat);
-        System.out.println(body);
+//        System.out.println(fromFormat);
+//        System.out.println(targetFormat);
+//        System.out.println(body);
+        StringFormatUtil.formatString(fromFormat,targetFormat,body);
     }
 
 
