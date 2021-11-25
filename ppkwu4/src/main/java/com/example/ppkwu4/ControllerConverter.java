@@ -24,19 +24,19 @@ public class ControllerConverter {
         switch (fromFormat) {
             case "csv":
                 String responseApi = callExternalStringUtilityApi("http://localhost:1234/csv", textToFormat);
-                response = StringFormatUtil.formatString("csv", textToFormat, responseApi);
+                response = StringFormatUtil.formatString(fromFormat, targetFormat, responseApi);
                 break;
             case "xml":
                 responseApi = callExternalStringUtilityApi("http://localhost:1234/xml", textToFormat);
-                response = StringFormatUtil.formatString("xml", textToFormat, responseApi);
+                response = StringFormatUtil.formatString(fromFormat, targetFormat, responseApi);
                 break;
             case "txt":
                 responseApi = callExternalStringUtilityApi("http://localhost:1234/txt", textToFormat);
-                response = StringFormatUtil.formatString("txt", textToFormat, responseApi);
+                response = StringFormatUtil.formatString(fromFormat, targetFormat, responseApi);
                 break;
             case "json":
                 responseApi = callExternalStringUtilityApi("http://localhost:1234/json", textToFormat);
-                response = StringFormatUtil.formatString("json", textToFormat, responseApi);
+                response = StringFormatUtil.formatString(fromFormat, targetFormat, responseApi);
                 break;
             default:
                 break;

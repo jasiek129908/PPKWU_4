@@ -29,7 +29,7 @@ public class StringFormatUtil {
             case "txt":
                 System.out.println("jsON:  "+jsonText);
                 jsonObject = new JSONObject(jsonText);
-                response = String.format("Text: %s\nupperCase: %d\nlowerCase: %d\ndigits: %d\nwhiteCharacters: %d\nspecialCharacters: %d",
+                response = String.format("Text: %s\nupperCase: %s\nlowerCase: %s\ndigits: %s\nwhiteCharacters: %s\nspecialCharacters: %s",
                         jsonObject.get("textToProcess"), jsonObject.get("upperCaseCounter"), jsonObject.get("lowerCaseCounter"), jsonObject.get("digitCounter"),
                         jsonObject.get("whiteSpaceCounter"), jsonObject.get("specialCharacterCounter"));
                 break;
